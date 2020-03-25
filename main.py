@@ -16,9 +16,9 @@ if __name__ == "__main__":
     
     print('********************** Loading data  **********************')
     path = os.getcwd()+'\\data\\'
-    X_train = pd.read_csv(path+'X_train.csv', index_col=0)['designation'][:1000]
+    X_train = pd.read_csv(path+'X_train.csv', index_col=0)['designation']
     X_test =  pd.read_csv(path+'X_test.csv', index_col=0)['designation']
-    Y_train = pd.read_csv(path+'Y_train.csv', index_col=0)['prdtypecode'][:1000]
+    Y_train = pd.read_csv(path+'Y_train.csv', index_col=0)['prdtypecode']
     Y_test = pd.read_csv(path+'Y_test.csv', index_col=0)['prdtypecode']
 
 #%%
