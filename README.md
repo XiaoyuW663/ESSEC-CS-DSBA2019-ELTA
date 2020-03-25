@@ -3,7 +3,7 @@
 
 Hi there,
 
-  To run main.py successfully, please put your datasets in the <data> folder.
+  To run main.py successfully, please put your datasets in the `data` folder.
   4 datasets would be needed and named exactly as followings:
   
   `X_train.csv` :the train dataset which follows the format of the challengedata(  https://challengedata.ens.fr/participants/challenges/35/download/x-train)
