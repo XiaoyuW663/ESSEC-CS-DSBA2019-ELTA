@@ -13,7 +13,7 @@ from models import classifiers,run_model
 
 if __name__ == "__main__":
 
-#%%
+
     print('********************** Loading data  **********************')
     path = ''
     X_train = pd.read_csv(path+'X_train.csv', index_col=0)['designation']
@@ -21,7 +21,7 @@ if __name__ == "__main__":
     Y_train = pd.read_csv(path+'Y_train.csv', index_col=0)['prdtypecode']
     Y_test = pd.read_csv(path+'Y_test.csv', index_col=0)['prdtypecode']
 
-#%%
+
     print('********************** Preprocessing  **********************')
     method = 'TF-IDF'
 
@@ -34,7 +34,7 @@ if __name__ == "__main__":
     y_train = np.array(Y_train)
     y_test = np.array(Y_test)
 
-    #%%
+    
     print('********************** Running models **********************')
     for name,clf in classifiers.items():
         acc, f1 = run_model(clf,X_train,y_train,X_test,y_test)
