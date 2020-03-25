@@ -37,10 +37,12 @@ if __name__ == "__main__":
     X_test = X[len(X_train):]
     y_train = np.array(Y_train)
     y_test = np.array(Y_test)
-
-    #%%
+    
+#%%
     print('********************** Running models **********************')
     for name,clf in classifiers.items():
         acc, f1 = run_model(clf,X_train,y_train,X_test,y_test)
         print('[Model]: ' + name +' [acc]: ' + str(acc) +' [f1]: '+ str(f1))
+        
+    print('************************* The End  *************************')
 
