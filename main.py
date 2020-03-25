@@ -9,7 +9,7 @@ Created on Wed Mar 11 19:53:55 2020
 '''
 """
 
-#load data
+
 import pandas as pd
 import numpy as np
 import os
