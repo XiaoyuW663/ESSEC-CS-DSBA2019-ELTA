@@ -2,7 +2,11 @@
 """
 Created on Wed Mar 11 19:53:55 2020
 
-@author: wong
+@Group Members:
+    (1) CHEN Min
+    (2) WANG Xiaoyu
+    (3) ZHANG Qihui
+'''
 """
 
 #load data
