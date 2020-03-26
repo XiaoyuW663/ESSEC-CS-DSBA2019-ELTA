@@ -50,7 +50,7 @@ classifiers = {
     'GradientBoostingTree':GradientBoostingClassifier(n_estimators=175,min_samples_split=2,
                                                       min_samples_leaf=12, max_features=40,
                                                       max_depth=8, learning_rate= 0.1),
-    'XGBoost':XGBClassifier(subsample=0.6, reg_lambda =1.0, objective='multi:softmax', n_estimators= 190,
-                            min_child_weight= 0.6,max_depth= 38,learning_rate=0.1, gamma= 0, 
+    'XGBoost':XGBClassifier(subsample=0.65, reg_lambda =1.0, objective='multi:softmax', n_estimators= 190,
+                            min_child_weight= 0.6,max_depth= 38,learning_rate=0.1, gamma= 0.05, 
                             colsample_bytree=0.9, colsample_bylevel=0.5)
  }
