@@ -14,10 +14,10 @@ class sentence2vector:
         def __init__(self,sentences,method = 'TF-IDF',vector_size = 100, min_count = 2):
             import spacy
             try:
-                self.spacy_nlp = spacy.load("fr")
+							self.spacy_nlp = spacy.load("fr")
             except:
-                try:					
-	                self.spacy_nlp = spacy.load("fr_core_news_sm")
+              try:
+								self.spacy_nlp = spacy.load("fr_core_news_sm")
 				except:
 					print('spacy-fr not downloaded')
 					raise
