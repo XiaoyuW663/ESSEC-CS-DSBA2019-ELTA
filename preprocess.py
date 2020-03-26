@@ -8,7 +8,12 @@ Created on Wed Mar 25 20:52:00 2020
 import pandas as pd
 import numpy as np
 from tqdm import tqdm as tqdm
+
+
 class sentence2vector:
+        '''
+        use this module to clean and convert the title texts into numerical vectors
+        '''
         def __init__(self,sentences,method = 'TF-IDF',vector_size = 100, min_count = 2):
             import spacy
             try:
