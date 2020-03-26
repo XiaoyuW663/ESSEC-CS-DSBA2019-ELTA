@@ -2,7 +2,7 @@
 """
 Created on Wed Mar 25 20:52:00 2020
 
-@author: wong
+@author: wang
 """
 
 import pandas as pd
@@ -16,8 +16,11 @@ class sentence2vector:
             try:
                 self.spacy_nlp = spacy.load("fr")
             except:
-                #! spacy download fr
-                self.spacy_nlp = spacy.load("fr_core_news_sm")
+                try:					
+	                self.spacy_nlp = spacy.load("fr_core_news_sm")
+				except:
+					print('spacy-fr not downloaded')
+					raise
 
             self.unknown_token = '<ukn>'
             self.sentences = sentences
