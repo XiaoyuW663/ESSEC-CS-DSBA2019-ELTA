@@ -16,6 +16,8 @@ def run_model(clf,X_train,y_train,X_test,y_test):
     @param: y_train - a numpy array containing labels for each training sample
     @param: X_test - a numpy matrix containing features for test data (e.g. TF-IDF matrix)
     @param: y_test - a numpy array containing labels for each test sample
+    
+    fit clf on X_train&y_train, predict on X_test, return accuracy & weighted f1 score
     """
     clf.fit(X_train, y_train)
 
@@ -36,6 +38,7 @@ classifiers = {
                         max_depth= 30, criterion= 'gini'),
                         
     'Bagging':BaggingClassifier(n_estimators= 300, max_samples =0.7999999999999999,max_features=40),
+    
     'RandomForest':RandomForestClassifier(n_estimators= 230, min_samples_split= 2, min_samples_leaf=2, 
                                           max_features=70, max_depth=45),
     
@@ -50,6 +53,7 @@ classifiers = {
     'GradientBoostingTree':GradientBoostingClassifier(n_estimators=175,min_samples_split=2,
                                                       min_samples_leaf=12, max_features=40,
                                                       max_depth=8, learning_rate= 0.1),
+    
     'XGBoost':XGBClassifier(subsample=0.65, reg_lambda =1.0, objective='multi:softmax', n_estimators= 190,
                             min_child_weight= 0.6,max_depth= 38,learning_rate=0.1, gamma= 0.05, 
                             colsample_bytree=0.9, colsample_bylevel=0.5)
